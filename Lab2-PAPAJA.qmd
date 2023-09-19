@@ -24,14 +24,14 @@ editor: visual
 
 6.  Open a new text file by clicking File -- New File -- Text File. Save the file in the top level of your working directory as references.bib
 
-7.  Your goal is to create the following APA document( <https://github.com/ndphillips/IntroductionR_Course/blob/master/assignments/wpa/studentAPA/studentAPA_comp.pdf?raw=true)> by adding elements to the studentAPA.Rmd document. In a web browser, go to the link above to download the studentAPA_comp.pdf file and see how it looks.
+7.  Your goal is to create the following APA document( <https://github.com/ndphillips/IntroductionR_Course/blob/master/assignments/wpa/studentAPA/studentAPA_comp.pdf?raw=true)> by adding elements to the studentAPA.Rmd document. In a web browser, go to the link above to download the file and see how it looks.
 
 ## Adding titles and knitting
 
 8.  In studentAPA.Rmd, replace the X values in the main fields at the top of the document (name, paper title, short-title, affiliation) with the appropriate names and titles. Come up with a short title for the paper and a co-author for Jack Sparrow.
 9.  Now Knit your document to see the current version of the PDF output! You can do this by clicking the "Knit" button at the top of your window or by using the Command + Shift + K shortcut (on Mac).
 
-## Add References to .bib
+## Add references to .bib
 
 10. Now it's time to add some references to your references.bib file. You will be referencing three papers in this document. Using scholar.google.com (scholar.google.com), find the BibTeX references for the following paper(s) and add them to your references.bib file. Make sure to save the file!
 
@@ -57,7 +57,7 @@ editor: visual
 
 16. You can render your document in one of three document classes: doc (document), man (manuscript) and pub (publication). At the top of your Markdown file, you'll see the text class: man. Change the class to doc and knit. Then change the class to pub and knit. Look at the new outputs!
 
-## Add Statistics
+## Add statistics
 
 17. In the third chunk, there are some inline chunks that calculate the mean grades for exam 1 through exam 3. Update these chunks with the correct code to calculate the mean scores for the math and Portuguese datasets. You will have to use a function called `` pivot_longer` `` which is a `tidyverse` function that will take columns and put them as rows. **Set this chunk to** `eval = TRUE`
 
@@ -71,7 +71,7 @@ editor: visual
 
 ## QMD
 
--   Try to do the same thing, but use `apaquarto`.
+-   Try to do the same thing, but use `apaquarto`. Go here and follow the instructions: \<https://github.com/wjschne/apaquarto\>.
 
 # Submit
 
