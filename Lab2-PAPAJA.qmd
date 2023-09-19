@@ -14,9 +14,7 @@ editor: visual
 
 1.  In the project directory, create a folder called data.
 
-2.  The two data files you need for this assignment are located at <https://raw.githubusercontent.com/ndphillips/IntroductionR_Course/master/assignments/wpa/data/studentmath.txt> (the mathdata) and <https://raw.githubusercontent.com/ndphillips/IntroductionR_Course/master/assignments/wpa/data/studentpor.txt> (the portugesedata), we need to get these files into your data folder. To do this, read the files and save me them to their respective folders.
-
-<!-- -->
+2.  The two data files you need for this assignment are located at <https://raw.githubusercontent.com/jgeller112/PSY503-Lab2-RMDQMD/main/data/student_math.csv> and (the <https://raw.githubusercontent.com/jgeller112/PSY503-Lab2-RMDQMD/main/data/student_por.csv> (portugesedata), we need to get these files into your environment.
 
 3.  Open a new R Markdown document using the `papaja` template. Save the file in the top level of your working directory (that is, next to the Lab2-RMD.Rproj ) as studentAPA.Rmd
 
@@ -30,12 +28,12 @@ editor: visual
 
 ## Adding titles and knitting
 
-8.  In studentAPA.Rmd, replace the X values in the main fields at the top of the document (name, paper title, short-title, affiliation) with the appropriate names and titles.
+8.  In studentAPA.Rmd, replace the X values in the main fields at the top of the document (name, paper title, short-title, affiliation) with the appropriate names and titles. Come up with a short title for the paper and a co-author for Jack Sparrow.
 9.  Now Knit your document to see the current version of the PDF output! You can do this by clicking the "Knit" button at the top of your window or by using the Command + Shift + K shortcut (on Mac).
 
 ## Add References to .bib
 
-10. Now it's time to add some references to your studentAPA.bib file! You will be referencing three papers in this document. Using scholar.google.com (scholar.google.com), find the BibTeX references for the following paper(s) and add them to your studentAPA.bib file. Make sure to save the file!
+10. Now it's time to add some references to your references.bib file. You will be referencing three papers in this document. Using scholar.google.com (scholar.google.com), find the BibTeX references for the following paper(s) and add them to your references.bib file. Make sure to save the file!
 
     -   Horwitz, Elaine K., Michael B. Horwitz, and Joann Cope. "Foreign language classroom anxiety." The modern language journal70.2 (1986): 125-132.
 
@@ -43,39 +41,37 @@ editor: visual
 
     -   Abedi, J., & Lord, C. (2001). The language factor in mathematics tests. Applied Measurement in Education, 14(3), 219-234.
 
-11. Now it's time to cite your new references. I've included one citation already in the studentAPA.Rmd document in the format\@abedi2001language. Now cite the additional papers in your studentAPA.bib file by replacing the XXX values with the appropriate citations. Knit your document to see the result.
+11. Now it's time to cite your new references. I've included one citation already in the studentAPA.Rmd document in the format \@abedi2001language. Now cite the additional papers in your references.bib file by replacing the XXX values with the appropriate citations (doesnt matter which ones). Knit your document to see the result. You should see a reference page with all your references cited.
 
-## Load Data
+## Load data
 
 12. You need to load your data in a separate chunk. Load the data using the URLs above. **Knit your document to see the result** If you don't see any errors, then the data should have been correctly loaded!
-13. In the Participants section, there are inline code chunks that should indicate the number of participants in each data set. Replace the 1+1 values with nrow(student.por) and nrow(student.math) to get the number of students in each data set. Knit yourvdocument to see the result
+13. In the Participants section, there are inline code chunks that should indicate the number of participants in each data set. Replace the 1+1 values with \# of rows for each dataset to get the number of students in each data set. Knit your document to see the result
 
-## Add Plots
+## Add plots
 
-14. In the Results section, I've included a chunk called fig1 that creates Figure 1, a series of histograms. Update the caption to the plot in the chunk options. Then change eval = FALSE to eval = TRUE to tell Markdown to run the chunk. Knit your document to see the result. You should now see the histograms in your document!
-15. There is another chunk called fig2 that plots the correlations between numeric predictors in the math data. Turn on the chunk by setting eval = TRUE , update the caption. **Knit your document to see the result**
+14. In the Results section, I've included a chunk called `fig1` that creates Figure 1, a series of histograms. Update the caption to the plot in the chunk options. Then change eval = FALSE to eval = TRUE to tell Markdown to run the chunk. Knit your document to see the result. You should now see the histograms in your document!
+15. There is another chunk called fig2 that plots the correlations between numeric predictors in the math data. It uses a package called `ggcorrplot`. Turn on the chunk by setting eval = TRUE , update the caption. **Knit your document to see the result**
 
-## Look at Different Document Classes
+## Look at different document classes
 
 16. You can render your document in one of three document classes: doc (document), man (manuscript) and pub (publication). At the top of your Markdown file, you'll see the text class: man. Change the class to doc and knit. Then change the class to pub and knit. Look at the new outputs!
 
 ## Add Statistics
 
-17. Below the first chunk, there are some inline chunks that calculate the mean grades for exam 1 and exam 3 of the Portuguese data. Update these chunks with the correct code to calculate the mean G3 scores for the math and Portuguese datasets.
+17. In the third chunk, there are some inline chunks that calculate the mean grades for exam 1 through exam 3. Update these chunks with the correct code to calculate the mean scores for the math and Portuguese datasets. You will have to use a function called `` pivot_longer` `` which is a `tidyverse` function that will take columns and put them as rows. **Set this chunk to** `eval = TRUE`
 
-    **Knit your document to see the result**.
+18. In chunks 6 and 7 I create tables of summary statistics for the Math and Portuguese data useing `apa_table` from `papaja`. Update the captions in these chunks.Then, change eval = FALSE to eval = TRUE in the chunk options. **Knit your document to see the result**. You should now see the tables in your document.
 
-18. The next two chunks create tables of summary statistics for the Math and Portuguese data. Update the captions in these chunks.Then, change eval = FALSE to eval = TRUE in the chunk options. **Knit your document to see the result**. You should now see the tables in your document.
+19. The next chunk conducts and saves regressions for both the math and Portuguese data. The code for the Portuguese test sex.por.lm is already completed, but the code to create a similar test for the math data is missing. Add the code for the math test to create the object sex.math.lm. Then, change eval = FALSE to eval = TRUE in the chunk options.
 
-19. The next chunk conducts and saves t-tests for both the math and Portuguese data. The code for the Portuguese test sex.por.ttest is already completed, but the code to create a similar test for the math data is missing. Add the code for the math test to create the object sex.math.ttest. Then, change eval = FALSE to eval = TRUE in the chunk options.
-
-20. The next lines use inline code to refer to the results of your t-test objects. Replace the 1+1 values with `papaja::apa_print(sex.por.ttest)`\$full_result and \`papaja::apa_print(sex.math.ttest)\$full_result\`
+20. The next lines use inline code to refer to the results of your lm object. Replace the 1+1 values with `papaja::apa_print(sex.por.lm)`\$full_result and \`papaja::apa_print(sex.math.lm)\$full_result\`
 
     **Knit your document to see the result**.
 
 ## QMD
 
--   Do the same thing, but use `apaquarto`.
+-   Try to do the same thing, but use `apaquarto`.
 
 # Submit
 
