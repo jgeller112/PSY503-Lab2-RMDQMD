@@ -5,7 +5,7 @@ editor: visual
 
 # Lab Goals
 
--   Create the following APA style document (https://github.com/ndphillips/IntroductionR_Course/blob/master/assignments/wpa/studentAPA/studentAPA_comp.pdf? raw=true)) using R markdown and the papaja package
+-   Create the following APA style document \<https://github.com/jgeller112/PSY503-Lab2-RMDQMD/blob/main/papaja_ms.pdf\> using R markdown and the papaja package
 -   Automatically create APA style statistical conclusions from R objects using papaja::apa_print()
 -   Cite articles using .bib files and appropriate bibtex citations.
 -   Use in-line chunks to incorporate R output directly into your text.
@@ -65,7 +65,7 @@ editor: visual
 
 19. The next chunk conducts and saves regressions for both the math and Portuguese data. The code for the Portuguese test sex.por.lm is already completed, but the code to create a similar test for the math data is missing. Add the code for the math test to create the object sex.math.lm. Then, change eval = FALSE to eval = TRUE in the chunk options.
 
-20. The next lines use inline code to refer to the results of your lm object. Replace the 1+1 values with `papaja::apa_print(sex.por.lm)`\$full_result and \`papaja::apa_print(sex.math.lm)\$full_result\`
+20. The next lines use inline code to refer to the results of your lm object. Replace the 1+1 values with `papaja::apa_print(sex.por.lm)`\$full_result `` and ` ``papaja::apa_print(sex.math.lm)\$full_result\`
 
     **Knit your document to see the result**.
 
