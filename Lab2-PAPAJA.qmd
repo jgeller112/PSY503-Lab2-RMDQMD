@@ -71,7 +71,7 @@ editor: visual
 
 ## QMD
 
--   Try to do the same thing, but use `apaquarto`. Go here and follow the instructions: \<https://github.com/wjschne/apaquarto\>.
+-   Create this same document using `apaquarto`. Go here and follow the instructions: \<https://github.com/wjschne/apaquarto\>. For any extra arguments in the YAML, just leave the defaults from the template.
 
 # Submit
 
